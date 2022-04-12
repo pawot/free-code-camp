@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+%header {
+    padding-bottom: 0.6rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: rgb(49, 49, 49);
+}
+// menu manipulation
+.nav-item {
+    display: none;
+}
+
+.active {
+    display: flex;
+}
+
+.btn-border {
+    outline: solid rgb(233, 114, 70);
+}
+
+
+body {
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+    color: rgb(82, 79, 79);
+    line-height: 1.5rem;
+}
+
+
+#toggle-bar {
+    position: absolute;
+    top: 2%;
+    left: 80%;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: rgb(180, 174, 174);
+    padding: 0.5rem;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    
+    div {
+        height: 2px;
+        background-color: black;
+    }
+    &:hover {
+        cursor: pointer;
+        background-color: rgb(214, 207, 198);
+    }
+}
+
+#header-nav {
+    box-sizing: border-box;
+    padding: 1rem;
+}
+
+#navbar {
+    padding-top: 1.5rem;
+    header {
+        @extend %header;
+    }
+    .nav-item {
+        summary {
+            max-width: 5rem;
+            &:hover {
+                cursor: pointer;
+                text-shadow: 2px 2px 8px rgb(233, 114, 70);
+            }    
+        }
+        li {
+            list-style: none;
+            padding-bottom: 0.6rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            &:hover {
+                text-shadow: 2px 2px 8px rgb(233, 114, 70);
+            }
+        }
+    }     
+}
+
+#main-doc {
+    padding: 1rem;
+}
+
+.main-section {
+    padding: 1.5rem 0.2rem;
+    header {
+        @extend %header; 
+    }
+}
+
+footer {
+    padding: 1rem;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+code, pre {
+    background-color: rgb(230, 221, 221);
+}
+
+.top {
+    position: sticky;
+    margin-top: calc(100vh + 150px);
+    bottom: 30px;
+    float: right;
+    padding: 1rem;
+    color: white;
+    font-size: large;
+    background-color: rgba(56, 14, 14, 0.76);
+    border-radius: 10px;
+    &:hover {
+        background-color: rgba(97, 25, 25, 0.548);
+    }  
+}
+
+@media (min-width: 769px) {
+    #toggle-bar {
+        display: none;
+    }
+
+    .nav-item {
+        display: flex;
+    }
+
+    #header-nav {
+        position: fixed;
+        height: 100%;
+        top: 0;
+        left: 0;
+        width: 17rem;
+        background-color: rgba(217, 234, 243, 0.301);
+        overflow-y: auto;
+    }
+
+    #main-doc {
+        margin-left: 17rem;
+    }
+    
+    footer {
+        margin-left: 17rem;
+        padding: 1em; 
+    }
+}

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="tech_doc.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0c5b26dd88.js" crossorigin="anonymous"></script>
+    <title>HTML and CSS basics</title>
+</head>
+
+<body>
+    <div id="header-nav">
+        <div id="toggle-bar">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav id="navbar">
+            <header>HTML and CSS basics</header>
+            <details class="nav-item">
+                <summary>HTML</summary>
+                <ul>
+                    <li><a href="#What_is_HTML?" class="nav-link">What is HTML?</a></li>
+                    <li><a href="#Anatomy_of_an_HTML_element" class="nav-link">Anatomy of an HTML element</a>
+                    </li>
+                    <li><a href="#Nesting_elements" class="nav-link">Nesting elements</a></li>
+                    <li><a href="#Block_versus_inline_elements" class="nav-link">Block versus inline
+                            elements</a></li>
+                    <li><a href="#Empty_elements" class="nav-link">Empty elements</a></li>
+                    <li><a href="#Attributes" class="nav-link">Attributes</a></li>
+                </ul>
+            </details>
+            <details class="nav-item">
+                <summary>CSS</summary>
+                <ul>
+                    <li><a href="#What_is_CSS?" class="nav-link">What is CSS?</a></li>
+                    <li><a href="#What_is_CSS_for?" class="nav-link">What is CSS for?</a></li>
+                    <li><a href="#CSS_syntax" class="nav-link">CSS syntax</a></li>
+                    <li><a href="#CSS_Modules" class="nav-link">CSS Modules</a></li>
+                    <li><a href="#CSS_Specifications" class="nav-link">CSS Specifications</a></li>
+                    <li><a href="#Browser_support_information" class="nav-link">Browser support information</a></li>
+                </ul>
+            </details>
+        </nav>
+    </div>
+    <main id="main-doc">
+        <section id="What_is_HTML?" class="main-section">
+            <header>What is HTML?</header>
+            <p>HTML (Hypertext Markup Language) is a markup language that tells web browsers how to structure the web
+                pages you visit. It can be as complicated or as simple as the web developer wants it to be. HTML
+                consists of a series of elements, which you use to enclose, wrap, or mark up different parts of content
+                to make it appear or act in a certain way. The enclosing tags can make content into a hyperlink to
+                connect to another page, italicize words, and so on. For example, consider the following line of text:
+            </p>
+            <code>My cat is very grumpy</code>
+            <p>If we wanted the text to stand by itself, we could specify that it is a paragraph by enclosing it in a
+                paragraph (<code>&lt;p&gt;</code>) element:</p>
+            <code>&lt;p&gt;My cat is very grumpy&lt;p&gt;</code>
+        </section>
+        <section id="Anatomy_of_an_HTML_element" class="main-section">
+            <header>Anatomy of an HTML element</header>
+            <p>Let's further explore our paragraph element from the previous section:</p>
+            <img src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started/grumpy-cat-small.png"
+                alt="paragraph tag example picture">
+            <p>The anatomy of our element is:</p>
+            <ul>
+                <li>
+                    <p><strong>The opening tag:</strong> This consists of the name of the element (in this example, p
+                        for paragraph), wrapped in opening and closing angle brackets. This opening tag marks where the
+                        element begins or starts to take effect. In this example, it precedes the start of the paragraph
+                        text.</p>
+                </li>
+                <li>
+                    <p><strong>The content:</strong> This is the content of the element. In this example, it is the
+                        paragraph text.</p>
+                </li>
+                <li>
+                    <p><strong>The closing tag:</strong> This is the same as the opening tag, except that it includes a
+                        forward slash before the element name. This marks where the element ends. Failing to include a
+                        closing tag is a common beginner error that can produce peculiar results.</p>
+                </li>
+            </ul>
+            <p>The element is the opening tag, followed by content, followed by the closing tag.</p>
+        </section>
+        <section id="Nesting_elements" class="main-section">
+            <header>Nesting elements</header>
+            <p>Elements can be placed within other elements. This is called nesting. If we wanted to state that our cat
+                is very grumpy, we could wrap the word very in a <code>&lt;strong&gt;</code> element, which means that
+                the word is to have strong(er) text formatting:</p>
+            <code>&lt;p&gt;My cat is &lt;strong&gt;very&lt;/strong&gt; grumpy.&lt;p&gt;</code>
+            <p>The tags have to open and close in a way that they are inside or outside one another. </p>
+        </section>
+        <section id="Block_versus_inline_elements" class="main-section">
+            <header>Block versus inline elements</header>
+            <p>There are two important categories of elements to know in HTML: block-level elements and inline elements.
+            </p>
+            <ul>
+                <li>
+                    <p>Block-level elements form a visible block on a page. A block-level element appears on a new line
+                        following the content that precedes it. Any content that follows a block-level element also
+                        appears on a new line. Block-level elements are usually structural elements on the page. For
+                        example, a block-level element might represent headings, paragraphs, lists, navigation menus, or
+                        footers. A block-level element wouldn't be nested inside an inline element, but it might be
+                        nested inside another block-level element.</p>
+                </li>
+                <li>
+                    <p>Inline elements are contained within block-level elements, and surround only small parts of the
+                        document's content (not entire paragraphs or groupings of content). An inline element will not
+                        cause a new line to appear in the document. It is typically used with text, for example an
+                        <code>&lt;a&gt;</code> element creates a hyperlink, and elements such as <code>&lt;em&gt;</code>
+                        or <code>&lt;strong&gt;</code> create emphasis.
+                    </p>
+                </li>
+            </ul>
+        </section>
+        <section id="Empty_elements" class="main-section">
+            <header>Empty elements</header>
+            <p>Not all elements follow the pattern of an opening tag, content, and a closing tag. Some elements consist
+                of a single tag, which is typically used to insert/embed something in the document. For example, the
+                <code>&lt;img&gt;</code> element embeds an image file onto a page.
+            </p>
+        </section>
+        <section id="Attributes" class="main-section">
+            <header>Attributes</header>
+            <p>Elements can also have attributes. Attributes look like this:</p>
+            <img src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started/grumpy-cat-attribute-small.png"
+                alt="Attribute example image">
+            <p>Attributes contain extra information about the element that won't appear in the content. In this example,
+                the <code>class</code> attribute is an identifying name used to target the element with style
+                information.</p>
+            <p>An attribute should have:</p>
+            <ul>
+                <li>
+                    <p>A space between it and the element name. (For an element with more than one attribute, the
+                        attributes should be separated by spaces too.)</p>
+                </li>
+                <li>
+                    <p>The attribute name, followed by an equal sign.</p>
+                </li>
+                <li>
+                    <p>An attribute value, wrapped with opening and closing quote marks.</p>
+                </li>
+            </ul>
+        </section>
+        <section id="What_is_CSS?" class="main-section">
+            <header>What is CSS?</header>
+            <p>CSS (Cascading Style Sheets) allows you to create great-looking web pages, but how does it work under the
+                hood? This article explains what CSS is, with a simple syntax example, and also covers some key terms
+                about the language.</p>
+            <p>In the Introduction to HTML module we covered what HTML is, and how it is used to mark up documents.
+                These documents will be readable in a web browser. Headings will look larger than regular text,
+                paragraphs break onto a new line and have space between them. Links are colored and underlined to
+                distinguish them from the rest of the text. What you are seeing is the browser's default styles — very
+                basic styles that the browser applies to HTML to make sure it will be basically readable even if no
+                explicit styling is specified by the author of the page.</p>
+            <p>However, the web would be a boring place if all websites looked like that. Using CSS you can control
+                exactly how HTML elements look in the browser, presenting your markup using whatever design you like.
+            </p>
+        </section>
+        <section id="What_is_CSS_for?" class="main-section">
+            <header>What is CSS for?</header>
+            <p>As we have mentioned before, CSS is a language for specifying how documents are presented to users — how
+                they are styled, laid out, etc.</p>
+            <p>A document is usually a text file structured using a markup language — HTML is the most common markup
+                language, but you may also come across other markup languages such as SVG or XML.</p>
+            <p>Presenting a document to a user means converting it into a form usable by your audience. Browsers, like
+                Firefox, Chrome, or Edge , are designed to present documents visually, for example, on a computer
+                screen, projector or printer.</p>
+            <p>CSS can be used for very basic document text styling — for example changing the color and size of
+                headings and links. It can be used to create layout — for example turning a single column of text into a
+                layout with a main content area and a sidebar for related information. It can even be used for effects
+                such as animation. Have a look at the links in this paragraph for specific examples.</p>
+        </section>
+        <section id="CSS_syntax" class="main-section">
+            <header>CSS syntax</header>
+            <p>CSS is a rule-based language — you define rules specifying groups of styles that should be applied to
+                particular elements or groups of elements on your web page. For example "I want the main heading on my
+                page to be shown as large red text."</p>
+            <p>The following code shows a very simple CSS rule that would achieve the styling described above:</p>
+            <pre>
+                <code>
+    h1 {
+        color: red;
+        font-size: 5em;
+    }</code>
+            </pre>
+            <p>The rule opens with a selector . This selects the HTML element that we are going to style. In this case
+                we are styling level one headings (<code>&lt;h1&gt;</code>).</p>
+            <p>We then have a set of curly braces <code>&lt;{ }&gt;</code>. Inside those will be one or more
+                declarations, which take the form of property and value pairs. Each pair specifies a property of the
+                element(s) we are selecting, then a value that we'd like to give the property.</p>
+            <p>Before the colon, we have the property, and after the colon, the value. CSS properties have different
+                allowable values, depending on which property is being specified. In our example, we have the color
+                property, which can take various color values. We also have the <code>font-size</code> property. This
+                property can
+                take various size units as a value.</p>
+            <p>A CSS stylesheet will contain many such rules, written one after the other.</p>
+            <pre>
+                <code>
+    h1 {
+        color: red;
+        font-size: 5em;
+    }
+            
+    p {
+        color: black;
+    }</code>
+            </pre>
+            <p>You will find that you quickly learn some values, whereas others you will need to look up. The individual
+                property pages on MDN give you a quick way to look up properties and their values when you forget, or
+                want to know what else you can use as a value.</p>
+        </section>
+        <section id="CSS_Modules" class="main-section">
+            <header>CSS Modules</header>
+            <p>As there are so many things that you could style using CSS, the language is broken down into modules.
+                You'll see reference to these modules as you explore MDN and many of the documentation pages are
+                organized around a particular module. For example, you could take a look at the MDN reference to the
+                Backgrounds and Borders module to find out what its purpose is, and what different properties and other
+                features it contains. You will also find links to the CSS Specification that defines the technology (see
+                below).</p>
+            <p>At this stage you don't need to worry too much about how CSS is structured, however it can make it easier
+                to find information if, for example, you are aware that a certain property is likely to be found among
+                other similar things and are therefore probably in the same specification.</p>
+            <p>For a specific example, let's go back to the Backgrounds and Borders module — you might think that it
+                makes logical sense for the <code>background-color</code> and <code>border-color</code> properties to be
+                defined in this module. And you'd be right.</p>
+        </section>
+        <section id="CSS_Specifications" class="main-section">
+            <header>CSS Specifications</header>
+            <p>All web standards technologies (HTML, CSS, JavaScript, etc.) are defined in giant documents called
+                specifications (or "specs"), which are published by standards organizations (such as the W3C, WHATWG,
+                ECMA, or Khronos) and define precisely how those technologies are supposed to behave.</p>
+            <p>CSS is no different — it is developed by a group within the W3C called the CSS Working Group. This group
+                is made of representatives of browser vendors and other companies who have an interest in CSS. There are
+                also other people, known as invited experts, who act as independent voices; they are not linked to a
+                member organization.</p>
+            <p>New CSS features are developed, or specified, by the CSS Working Group. Sometimes because a particular
+                browser is interested in having some capability, other times because web designers and developers are
+                asking for a feature, and sometimes because the Working Group itself has identified a requirement. CSS
+                is constantly developing, with new features becoming available. However, a key thing about CSS is that
+                everyone works very hard to never change things in a way that would break old websites. A website built
+                in 2000, using the limited CSS available then, should still be usable in a browser today!</p>
+            <p>As a newcomer to CSS, it is likely that you will find the CSS specs overwhelming — they are intended for
+                engineers to use to implement support for the features in user agents, not for web developers to read to
+                understand CSS. Many experienced developers would much rather refer to MDN documentation or other
+                tutorials. It is however worth knowing that they exist, understanding the relationship between the CSS
+                you are using, browser support (see below), and the specs.</p>
+        </section>
+        <section id="Browser_support_information" class="main-section">
+            <header>Browser support information</header>
+            <p>Once CSS has been specified then it is only useful for us in developing web pages if one or more browsers
+                have implemented it. This means that the code has been written to turn the instruction in our CSS file
+                into something that can be output to the screen. We'll look at this process more in the lesson How CSS
+                works. It is unusual for all browsers to implement a feature at the same time, and so there is usually a
+                gap where you can use some part of CSS in some browsers and not in others. For this reason, being able
+                to check implementation status is useful.</p>
+        </section>
+        
+        <a href="#" class="top">
+            <i class="fa-solid fa-angle-up"></i>
+        </a>
+    </main>
+    <footer>
+        <p>Reference:</p>
+        <p>The whole text is an excerpt from the <a href="https://developer.mozilla.org/en-US/">mdn</a> website</p>
+    </footer>
+    <script>    
+        const toggle = document.getElementById("toggle-bar");
+        const navMain = document.querySelectorAll(".nav-item");
+        toggle.addEventListener("click", () => {
+                navMain.forEach(elem => elem.classList.toggle("active"));
+                toggle.classList.toggle("btn-border");
+        }) 
+    </script>
+</body>
+</html>

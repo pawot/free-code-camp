@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap');
+
+body {
+    font-family: 'Old Standard TT', Courier, monospace;
+    line-height: 200%;
+    background: url("https://live.staticflickr.com/77/167285657_367d458ccc_b.jpg") fixed;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    padding: 3%;
+    font-size: 250%;
+    text-shadow: 5px 5px 35px #e6e6e6, -5px -5px 35px #e6e6e6;
+}
+
+article {
+    padding: 3%;
+    text-align: justify;
+    background-color: rgba(230, 230, 230, 0.9);
+}
+
+img {
+    border-radius: 15px;
+    display: block;
+    margin: 10% auto;
+    max-width: 100%;
+    box-shadow: 15px 15px 70px #e6e6e6, -15px -15px 70px #e6e6e6;
+}
+
+figcaption {
+    display: none;
+}
+
+section {
+    margin: 0.5em 1.5em 5em;
+}
+
+blockquote {
+    position: relative;
+    font-style: italic;
+    font-size: 150%;
+    text-align: left;
+    margin: 5% auto;
+    padding: 5% 20% 0%;
+}
+
+blockquote:before,
+blockquote:after {
+    position: absolute;
+    font-size: 200%;
+}
+
+blockquote:before {
+    content: open-quote;
+    left: 5%;
+}
+
+blockquote:after {
+    content: close-quote;
+    right: 10%;
+    bottom: -15%;
+}
+
+#timeline {
+    border-radius: 15px;
+    background-color: rgba(202, 198, 199, 0.5);
+    padding: 1% 5%;
+    margin-bottom: 6%;
+}
+
+#works {
+    text-align: left;
+    margin-top: 10%;
+}
+
+#more-about {
+    text-align: center;
+    font-size: x-large;
+    padding: 1% 3% 10%;
+    margin: auto;
+}
+
+a:hover,
+a:focus {
+    background-color: #f0d20f;
+    border-radius: 20px;
+}
+
+#sources {
+    font-size: smaller;
+    line-height: 100%;
+    background-color: rgba(202, 198, 199, 0.5);
+    padding: 1% 5%;
+    border-radius: 15px
+}
+
+ul {
+    list-style-type: none;
+}
+
+@media (min-width: 768px) {
+    body {
+        background-size: 100%;
+    }
+
+    #heading {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    h1 {
+        text-align: center;
+        padding: 10%;
+        font-size: 340%;
+    }
+
+    article {
+        font-size: 110%;
+        border-radius: 15px;
+        width: 80%;
+        margin: auto;
+        margin-bottom: 4%;
+    }
+
+    #timeline,
+    #sources {
+        border-radius: 15px;
+        margin: auto;
+    }
+}

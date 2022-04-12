@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap");
+
+
+body {
+    font-family: "New Tegomin", serif;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: rgba(47, 208, 192, 0.4);
+}
+
+#header {
+    text-align: center;
+}
+
+#survey-form {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    gap: 8px;
+    background-color: white;
+    border-style: solid;
+}
+
+#name,
+#number,
+#email {
+    width: 100%;
+    padding: 0 5px;
+    margin: auto;
+    box-sizing: border-box;
+    font-family: "New Tegomin", serif;
+    font-weight: bold;
+    border-style: none;
+    border-left: 10px solid #d959a5;
+    background-color: #d7cc60;
+}
+
+#name:hover,
+#number:hover,
+#email:hover {
+    border-left: 20px solid #d959a5;
+}
+
+.name {
+    grid-area: 1 / 1 / span 1 / span 6;
+    background-color: #d7cc60;
+    padding: 5px;
+}
+
+.number {
+    grid-area: 2 / 1 / span 1 / span 2;
+    background-color: #d7cc60;
+    padding: 5px;
+}
+
+.email {
+    grid-area: 2 / 3 / span 1 / span 4;
+    background-color: #d7cc60;
+    padding: 5px;
+}
+
+#radio-gender {
+    grid-area: 3 / 1 / span 1 / span 6;
+    background-color: #d7cc60;
+    padding: 5px;
+}
+
+.cost {
+    grid-area: 4 / 1 / span 1 / span 6;
+    background-color: #d7cc60;
+    padding: 5px;
+}
+
+#checkbox-mode {
+    grid-area: 5 / 1 / span 1 / span 6;
+    background-color: #d7cc60;
+    padding: 5px;
+}
+
+.comment {
+    grid-area: 6 / 1 / span 1 / span 6;
+    background-color: #d7cc60;
+    padding: 5px;
+}
+
+#submit {
+    grid-area: 7 / 1 / span 1 / span 6;
+    font-family: "New Tegomin", serif;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #616cff;
+}
+
+/* Custom radio buttons (https://www.w3schools.com/howto/howto_css_custom_checkbox.asp) */
+.gender-label {
+    position: relative;
+    padding-left: 2.5em;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+#male,
+#female,
+#other {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0.2em;
+    left: 1em;
+    height: 1em;
+    width: 1em;
+    background-color: white;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add background color */
+.gender-label:hover input~.checkmark {
+    background-color: #d959a5;
+}
+
+/* When the radio button is checked, add  background */
+.gender-label input:checked~.checkmark {
+    background-color: #d959a5;
+    height: 1.2em;
+    width: 1.2em;
+}
+
+#dropdown {
+    font-family: "New Tegomin", serif;
+    font-weight: bold;
+    border-left: 10px solid #d959a5;
+}
+
+#dropdown:hover {
+    border-left: 20px solid #d959a5;
+    cursor: pointer;
+}
+
+/*Create custom checkbox
+Customize the label (the container) */
+.checkbox {
+    position: relative;
+    padding-left: 2.2em;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark1 {
+    position: absolute;
+    top: 0.2em;
+    left: 1em;
+    height: 1em;
+    width: 1em;
+    background-color: white;
+}
+
+/* On mouse-over, add background color */
+.checkbox:hover input~.checkmark1 {
+    border: 2px solid #d959a5;
+}
+
+/* When the button is checked, add  background */
+.checkbox input:checked~.checkmark1 {
+    background-color: #d959a5;
+}
+
+textarea {
+    font-family: "New Tegomin", serif;
+    font-weight: bold;
+    margin-top: 0.5em;
+    width: 100%;
+    height: 65%;
+    box-sizing: border-box;
+    border: 4px solid #d959a5;
+    resize: none;
+    background-color: #d7cc60;
+}
+
+#submit:hover {
+    background-color: #d959a5;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    body {
+        font-size: 20px;
+    }
+
+    #survey-form {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+    #name,
+    #number,
+    #email {
+        font-size: 20px;
+    }
+
+    #dropdown {
+        margin-top: 10px;
+        font-size: 20px;
+    }
+
+    textarea {
+        width: 65%;
+        height: 80%;
+        font-size: 18px;
+    }
+}

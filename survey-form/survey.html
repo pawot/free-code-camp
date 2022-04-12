@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="survey.css" rel="stylesheet">
+    <title>Survey form</title>
+</head>
+
+<body>
+    <header id="header">
+        <h1 id="title">Commuting Survey form</h1>
+        <p id="description">How do you commute? Let us know by filling out this survey form</p>
+    </header>
+    <form id="survey-form">
+        <div class="name">
+            <label for="name" id="name-label">Name</label>
+            <input type="text" id="name" class="color-change" name="name" placeholder="Enter your name" required>
+        </div>
+        <div class="number">
+            <label for="number" id="number-label">Age</label>
+            <input type="number" id="number" class="color-change" name="age" min=1 max=120 placeholder="Number"
+                required>
+        </div>
+        <div class="email">
+            <label for="email" id="email-label">Email</label>
+            <input type="email" id="email" class="color-change" name="email" placeholder="youremail@example.com"
+                required>
+        </div>
+        <div id="radio-gender" class="check-radio">
+            <p>Please select your gender</p>
+            <label for="male" class="gender-label">Male
+                <input type="radio" id="male" name="gender" value="Male">
+                <span class="checkmark"></span>
+            </label>
+            <label for="female" class="gender-label">Female
+                <input type="radio" id="female" name="gender" value="Female">
+                <span class="checkmark"></span>
+            </label>
+            <label for="other" class="gender-label">Other
+                <input type="radio" id="other" name="gender" value="Other">
+                <span class="checkmark"></span>
+            </label>
+        </div>
+        <div class="cost">
+            <label for="dropdown" id="cost">Annual cost of commuting in dollars</label>
+            <select name="cost" id="dropdown">
+                <option value="------" disabled selected>------</option>
+                <option value="less than 1 000">less than 1 000</option>
+                <option value="1 000 - 1 999">1 000 - 1 999</option>
+                <option value="2 000 - 2 999">2 000 - 2 999</option>
+                <option value="3 000 - 3 999">3 000 - 3 999</option>
+                <option value="more than 4 000">more than 4 000</option>
+            </select>
+        </div>
+        <div id="checkbox-mode" class="check-radio">
+            <p>Please select mode of commuting</p>
+            <label for="walk" class="checkbox">Walk
+                <input type="checkbox" id="walk" name="walk" value="Walk">
+                <span class="checkmark1"></span>
+            </label>
+            <label for="bike" class="checkbox">Bike
+                <input type="checkbox" id="bike" name="bike" value="Bike">
+                <span class="checkmark1"></span>
+            </label>
+            <label for="car" class="checkbox">Car
+                <input type="checkbox" id="car" name="car" value="Car">
+                <span class="checkmark1"></span>
+            </label>
+            <label for="bus" class="checkbox">Bus
+                <input type="checkbox" id="bus" name="bus" value="Bus">
+                <span class="checkmark1"></span>
+            </label>
+            <label for="train" class="checkbox">Train
+                <input type="checkbox" id="train" name="train" value="Train">
+                <span class="checkmark1"></span>
+            </label>
+            <label for="metro" class="checkbox">Metro
+                <input type="checkbox" id="metro" name="metro" value="Metro">
+                <span class="checkmark1"></span>
+            </label>
+            <label for="other1" class="checkbox">Other
+                <input type="checkbox" id="other1" name="other1" value="Other">
+                <span class="checkmark1"></span>
+            </label>
+        </div>
+        <div class="comment">
+            <label for="comment">Leave your comment here:</label>
+            <textarea id="comment" name="comment" rows="3" placeholder="Enter your text"></textarea>
+        </div>
+        <input type="submit" id="submit" value="Submit">
+    </form>
+    <script>
+        let changeBkgd = function () {
+            this.style.backgroundColor = "white";
+        };
+
+        let idList = ["name", "number", "email", "comment"];
+        for (let i = 0; i < idList.length; i++) {
+            document.getElementById(idList[i]).addEventListener("click", changeBkgd);
+        }
+    </script>
+</body>
+
+</html>

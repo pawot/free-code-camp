@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+.inner-genre button:hover, #about #form #submit:hover {
+  cursor: pointer;
+  animation-name: btn;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+@keyframes btn {
+  100% {
+    background-color: #681b1b;
+  }
+}
+
+.underline {
+  border: 3px solid brown;
+  width: 8rem;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  line-height: 1.5rem;
+  background-color: #d3c4a0;
+  margin: 0;
+}
+
+/* Style svg images*/
+.fa-book-open {
+  margin: 2rem 2rem 2rem 5rem;
+  background-color: brown;
+  border-radius: 20px;
+  width: 7rem;
+}
+.fa-book-open .svg-great, .fa-book-open .svg-books {
+  font: italic 40px sans-serif;
+  fill: white;
+}
+.fa-book-open .svg-company {
+  font: italic 40px serif;
+  fill: white;
+}
+
+/* Navigation */
+#nav-bar {
+  color: black;
+  float: right;
+  width: 30vw;
+  margin: 4rem 10rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: large;
+}
+#nav-bar a {
+  color: black;
+}
+#nav-bar a:link {
+  text-decoration: none;
+}
+#nav-bar a:visited {
+  color: black;
+}
+#nav-bar a:hover {
+  animation-name: color;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+}
+@keyframes color {
+  100% {
+    text-shadow: 0 0 10px brown;
+  }
+}
+
+/* Style sections */
+.intro {
+  background-color: #c4b180;
+}
+
+#about {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  padding: 5rem;
+  gap: 15vw;
+}
+#about .wave {
+  position: absolute;
+  top: -10%;
+  left: 0;
+  fill: #998a67be;
+}
+#about .about-inner {
+  padding: 5rem 0;
+  width: 40vw;
+}
+#about #form {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 40vw;
+  font-size: 1.2rem;
+}
+#about #form #submit {
+  color: white;
+  background-color: brown;
+  padding: 10px;
+}
+#about #form input {
+  font-size: 1rem;
+  border-radius: 8px;
+}
+
+.services-inner {
+  display: flex;
+  align-items: center;
+  padding: 5rem;
+  min-height: 20rem;
+  gap: 15vw;
+}
+.services-inner #excellent {
+  margin-left: 5rem;
+  width: 30vw;
+}
+.services-inner #video {
+  border: 0;
+}
+.services-inner .delivery {
+  margin-left: 10rem;
+}
+
+#services-delivery {
+  background-color: #c4b180;
+}
+
+#genre {
+  display: flex;
+  justify-content: center;
+  padding: 5rem;
+  gap: 8vw;
+  min-height: 20rem;
+}
+
+.inner-genre {
+  position: relative;
+  padding: 1.5rem;
+  width: 15rem;
+  border: 1px solid grey;
+  box-shadow: 5px 5px 20px grey;
+  text-align: center;
+}
+.inner-genre:hover {
+  box-shadow: 5px 5px 20px #afaeae;
+}
+.inner-genre .underline {
+  margin: auto;
+}
+.inner-genre button {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+  padding: 15px 25px;
+  color: white;
+  font-size: 1.2rem;
+  background-color: brown;
+}
+footer {
+  background-color: #c4b180;
+  padding: 5rem;
+}
+
+@media (max-width: 1130px) {
+  .inner-genre button {
+    font-size: 1rem;
+    padding: 10px 15px;
+  }
+}
+@media (max-width: 1050px) {
+  .inner-genre {
+    min-height: 20rem;
+  }
+}
+@media (max-width: 900px) {
+  #nav-bar {
+    margin: 2rem;
+  }
+
+  #about {
+    flex-direction: column;
+    padding: 3rem;
+    gap: 2rem;
+  }
+  #about .wave {
+    display: none;
+  }
+  #about .about-inner {
+    padding: 0;
+    width: 40vw;
+  }
+  #about #form {
+    font-size: 1rem;
+  }
+
+  .services-inner {
+    flex-direction: column;
+    padding: 3rem;
+    min-height: 8rem;
+    gap: 2rem;
+  }
+  .services-inner #excellent {
+    margin-left: 0;
+  }
+  .services-inner .delivery {
+    margin-left: 0rem;
+  }
+
+  #genre {
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+    gap: 2rem;
+    min-height: 8rem;
+  }
+}
+@media (max-width: 640px) {
+  body {
+    text-align: center;
+  }
+
+  .underline {
+    margin: auto;
+  }
+
+  .fa-book-open {
+    margin: auto;
+    display: block;
+  }
+
+  #nav-bar {
+    float: none;
+    margin: 2rem auto;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .intro {
+    padding-top: 2rem;
+  }
+
+  #about .about-inner {
+    width: 80vw;
+    padding: 0;
+  }
+
+  #form {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .services-inner #excellent {
+    width: 80vw;
+  }
+
+  #video {
+    width: 90vw;
+  }
+}
+#header-img {
+  display: none;
+}
+
+/*# sourceMappingURL=great_books.css.map */
