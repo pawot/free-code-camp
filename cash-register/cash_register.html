@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="cash_register.css" rel="stylesheet">
+    <title>Cash register</title>
+</head>
+
+<body>
+    
+    <!--<div class="forms">-->
+        <form id="cid" class="centered" action="#">
+            <h1>Cash register</h1>
+            <p>Fill the cash register with coins and bills and click the submit button:</p>
+            <div>
+                <label for="penny">Penny</label>
+                <input type="number" id="penny" name="penny" class="num" min="0" value="0"
+                    placeholder="Multiple of 0.01" step="0.01">
+            </div>
+            <div>
+                <label for="nickel">Nickel</label>
+                <input type="number" id="nickel" name="nickel" class="num" min="0" value="0"
+                    placeholder="Multiple of 0.05" step="0.05">
+            </div>
+            <div>
+                <label for="dime">Dime</label>
+                <input type="number" id="dime" name="dime" class="num" min="0" value="0" placeholder="Multiple of 0.10"
+                    step="0.10">
+            </div>
+            <div>
+                <label for="quarter">Quarter</label>
+                <input type="number" id="quarter" name="quarter" class="num" min="0" value="0"
+                    placeholder="Multiple of 0.25" step="0.25">
+            </div>
+            <div>
+                <label for="dollar">Dollar</label>
+                <input type="number" id="dollar" name="dollar" class="num" min="0" value="0"
+                    placeholder="Multiple of 1.00" step="1.00">
+            </div>
+            <div>
+                <label for="five-dollars">Five Dollars</label>
+                <input type="number" id="five-dollars" name="five-dollars" class="num" min="0" value="0"
+                    placeholder="Multiple of 5.00" step="5.00">
+            </div>
+            <div>
+                <label for="ten-dollars">Ten Dollars</label>
+                <input type="number" id="ten-dollars" name="ten-dollars" class="num" min="0" value="0"
+                    placeholder="Multiple of 10.00" step="10.00">
+            </div>
+            <div>
+                <label for="twenty-dollars">Twenty Dollars</label>
+                <input type="number" id="twenty-dollars" name="twenty-dollars" class="num" min="0" value="0"
+                    placeholder="Multiple of 20.00" step="20.00">
+            </div>
+            <div>
+                <label for="one-hunderd-dollars">One-hundred Dollars</label>
+                <input type="number" id="one-hunderd-dollars" name="one-hunderd-dollars" class="num" min="0" value="0"
+                    placeholder="Multiple of 100.00" step="100.00">
+            </div>
+            <input id="submit" class="btn" type="button" value="Submit">
+            <p class="num-bad-info"></p>
+        </form>
+        
+        <div id="transaction" class="right-align">
+            <h2>Transaction</h2>
+            <form>
+                <p>Enter the price and the amount received in cash from the customer:</p>
+                <div>
+                    <label for="price">Price</label>
+                    <input type="number" id="price" name="price">
+                </div>
+                <div>
+                    <label for="cash">Cash</label>
+                    <input type="number" id="cash" name="cash">
+                </div>
+                <input id="submit-transaction" class="btn" type="button" value="Submit">
+            </form>
+            <div id="output">
+                <div class="output-inner">
+                    <h3>Drawer status</h3>
+                    <p id="status"></p>    
+                </div>
+                <div class="output-inner">
+                    <h3>Amount to change</h3>
+                    <div id="change"></div>
+                </div>
+            </div>
+        </div>
+    <!--</div>-->
+    <script src="cash_register.js"></script>
+</body>
+
+</html>

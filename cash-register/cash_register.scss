@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: rgb(225, 230, 236);
+    margin: 0;
+}
+
+.num-bad {
+    background-color: rgba(253, 67, 67, 0.63);
+}
+
+.num-bad-info {
+    background-color: rgba(253, 67, 67, 0.63);
+    padding: .2rem;
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+
+h1, h2 { 
+    text-align: center;
+}
+
+form {
+    div {
+        margin: .5rem auto;
+        text-align: center;
+    }   
+    label {
+        display: inline-block;
+        width: 10rem;
+        text-align: right; 
+    }
+}
+
+#cid, #transaction {
+    padding: 3rem 1rem;
+    background-color: rgb(225, 230, 236);
+}
+
+#transaction {
+    background-color: #cddef5;
+}
+
+.output-inner {
+    text-align: center;  
+}
+
+.change-inner {
+    display: flex;
+    justify-content: center;
+    max-height: 30px; 
+    gap: 20px;
+    p:nth-child(1) {
+        width: 10rem;
+        text-align: end;
+    }
+}
+
+input[type=number] {
+    max-width: 5rem;
+    border-radius: 5px;
+}
+
+.btn {
+    margin: 1.2rem auto;
+    display: block;
+    padding: 5px 8px;
+    cursor: pointer;
+    background-color: #d1f8b3;
+    border-radius: 8px;
+    &:hover {
+        background-color: #bed3ae;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    body {
+        overflow-y: hidden;
+    }
+    // move forms
+    .left-move {
+        animation-duration: 2s;
+        animation-name: moveLeft;
+        animation-fill-mode: forwards;
+        @keyframes moveLeft {
+            from {
+                left: 50%;
+            }
+            to {
+                left: 25%;
+            }
+        }
+    }
+    .top-move {
+        animation-duration: 2s;
+        animation-delay: 1s;
+        animation-name: moveTop;
+        animation-fill-mode: forwards;
+        @keyframes moveTop {
+            from {
+                top: 100vh;
+            }
+            to {
+                top: 50%;
+            }
+        }
+    }
+    // Default forms position
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);    
+    }
+
+    .right-align {
+        position: absolute;
+        top: 150vh;
+        left: 75%;
+        transform: translate(-50%, -50%);
+        label {
+            max-width: 5rem;
+        }
+    }
+
+    #cid, #transaction {
+        padding: 1rem;
+        border:1px solid grey;
+        width: 40vw;
+        box-shadow: 8px 8px 10px 10px grey;
+        background-color: #cddef5;
+    }
+    
+    .output-inner {
+        display: flex;
+        justify-content: space-between;
+    }
+}
